@@ -45,7 +45,7 @@ class UseTool():
             tools = [
                 Tool(
                     name="State of PDF QA System",
-                    func=qa.run(),
+                    func=qa.run,
                     description="Useful for asking personal questions."
                 )
             ]
