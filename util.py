@@ -19,7 +19,7 @@ from langchain.vectorstores import VectorStore
 from langchain.vectorstores.faiss import FAISS
 
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = ""
 
 
 @st.cache_data
