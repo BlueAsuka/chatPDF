@@ -42,15 +42,15 @@ def get_pages():
                     max_value=len(pages),
                     step=1
                 )
-                pages[page_sel - 1]  # Show the page number
-    
-    return pages
+                pages[page_sel - 1]  # Show the selected page content
+
+        return pages
 
 
-def set_openai_api():
-    """ Setting OpenAI API """
+def set_api():
+    """ Setting API """
     api = st.text_input(
-        "Enter OpenAI API Key",
+        "Enter API Key",
         type='password',
         placeholder="sk-",
         help="https://platform.openai.com/account/api-keys",

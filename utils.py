@@ -1,21 +1,10 @@
 import re
-import time
 from io import BytesIO
 from typing import Any, Dict, List
-import openai
 import streamlit as st
 from pypdf import PdfReader
-from langchain import LLMChain, OpenAI
-from langchain.agents import AgentExecutor, Tool, ZeroShotAgent
-from langchain.chains.question_answering import load_qa_chain
 from langchain.docstore.document import Document
-from langchain.document_loaders import PyPDFLoader
-from langchain.memory import ConversationBufferMemory
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import VectorStore
-
-
-OPENAI_API_KEY = ""
 
 
 @st.cache_data

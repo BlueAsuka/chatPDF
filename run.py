@@ -1,16 +1,19 @@
 import gui
-import core
-
+# import streamlit as st
+from core import UseTool
 
 def run():
     # Initialize the streamlit GUI
-    gui.set_streamlit_gui()
+    gui.set_streamlit_gui()     
 
+    # Get pages content and set api
     pages = gui.get_pages()
+    api = gui.set_api()
 
-    # Retrieval Q&A and use tools
-    index = core.embed(pages)
-    retrieval = core.retrieval(index)
+    if pages and api:
+        # Use tools for chating with a uploaded PDF
+        use_tool = UseTool(api, pages)
+        use_tool.chain() 
 
 
 if __name__ == "__main__":
