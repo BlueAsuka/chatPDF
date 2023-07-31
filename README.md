@@ -1,2 +1,2 @@
-# chatbotapp
- many applications using chatbot and conversational AI
+# chatPDF
+Use OpenAI API for doc embedding and LangChain for GPT querying. 
